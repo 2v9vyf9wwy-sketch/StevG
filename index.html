@@ -26,7 +26,7 @@
 <!-- LEVEL 1 -->
 <div id="level1">
   <p>Die Quersumme aus dem Datum, an dem dein Handy zwei grüne Punkte bekommen hat</p>
-  <input type="text" id="input1" placeholder="17">
+  <input type="text" id="input1" placeholder="Antwort">
   <br>
   <button onclick="check1()">Weiter</button>
 </div>
@@ -34,7 +34,7 @@
 <!-- LEVEL 2 -->
 <div id="level2" class="level">
   <p>Welche Zutat kommt immer in meinen Döner?</p>
-  <input type="text" id="input2" placeholder="Käse">
+  <input type="text" id="input2" placeholder="Antwort">
   <br>
   <button onclick="check2()">Weiter</button>
 </div>
@@ -42,7 +42,7 @@
 <!-- LEVEL 3 -->
 <div id="level3" class="level">
   <p>Wie viel MB an Daten haben wir bisher in WhatsApp gegenseitig versendet?</p>
-  <input type="text" id="input3" placeholder="1,6">
+  <input type="text" id="input3" placeholder="Antwort">
   <br>
   <button onclick="check3()">Weiter</button>
 </div>
@@ -57,29 +57,29 @@
 
 <script>
   function check1() {
-    if (document.getElementById("input1").value === "9") { // ändern
+    if (document.getElementById("input1").value === "17") { // ändern
       document.getElementById("level1").style.display = "none";
       document.getElementById("level2").style.display = "block";
     } else {
-      alert("Nope 😄");
+      alert("Falsch, du Idiot");
     }
   }
 
   function check2() {
-    if (document.getElementById("input2").value.toLowerCase() === "team") { // ändern
+    if (document.getElementById("input2").value.toLowerCase() === "Käse") { // ändern
       document.getElementById("level2").style.display = "none";
       document.getElementById("level3").style.display = "block";
     } else {
-      alert("Nope 😄");
+      alert("Auch falsch, HS");
     }
   }
 
   function check3() {
-    if (document.getElementById("input3").value === "6") { // ändern
+    if (document.getElementById("input3").value === "1,6") { // ändern
       document.getElementById("level3").style.display = "none";
       document.getElementById("final").style.display = "block";
     } else {
-      alert("Nope 😄");
+      alert("Streng dich mal an...");
     }
   }
 </script>
