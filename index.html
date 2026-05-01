@@ -26,15 +26,15 @@
 
 <!-- LEVEL 1 -->
 <div id="level1">
-  <p>Wie oft kommt die Ziffer 8 in den Zahlen 1 bis 100 vor?</p>
-  <input type="text" id="input1" placeholder="Antwort">
+  <p>Seit wie vielen Tagen sind wir auf SnaPchat befreundet?</p>
+  <input type="text" id="input1" placeholder="Zahl">
   <br>
   <button onclick="check1()">Weiter</button>
 </div>
 
 <!-- LEVEL 2 -->
 <div id="level2" class="level">
-  <p>Seit wie vielen TagEn sind wir auf Snapchat befreundet?</p>
+  <p>Wie oft kommt die Ziffer 8 in den ZahlEn 1 bis 100 vor?</p>
   <input type="text" id="input2" placeholder="Anzahl der Tage">
   <br>
   <button onclick="check2()">Weiter</button>
@@ -76,17 +76,17 @@
 
 <script>
   function check1() {
-    if (document.getElementById("input1").value === "20") { // ändern
+    if (document.getElementById("input1").value === "3462") { // ändern
       document.getElementById("level1").style.display = "none";
       document.getElementById("level2").style.display = "block";
     } else { alert("Sportsfreund... denk nochmal richtig nach!"); }
   }
 
   function check2() {
-    if (document.getElementById("input2").value == "3462") { // ändern
+    if (document.getElementById("input2").value == "20") { // ändern
       document.getElementById("level2").style.display = "none";
       document.getElementById("level3").style.display = "block";
-    } else { alert("Peinlich - das ist falsch); }
+    } else { alert("Peinlich - das ist falsch"); }
   }
 
   function check3() {
@@ -104,7 +104,7 @@
   }
 
   function check5() {
-    if (document.getElementById("input5").value === "2034622213817") { // ändern
+    if (document.getElementById("input5").value === "3462202213817") { // ändern
       document.getElementById("level5").style.display = "none";
       document.getElementById("final").style.display = "block";
     } else { alert("Falsch, du Hs. Jeder Buchstabe steht auch für eine Zahl. Denk nochmal nach"); }
