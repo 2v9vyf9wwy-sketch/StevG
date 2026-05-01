@@ -22,11 +22,12 @@
 <body>
 
 <h1>🔐 Deine Mission</h1>
-<p>Ein Code. Fünf Schritte. Keine Abkürzungen.</p>
+<p>Beantworte alle Fragen, um zu deinem Geschenk zu kommen</p>
 
 <!-- LEVEL 1 -->
 <div id="level1">
   <p>Wie oft kommt die Ziffer 8 in den Zahlen 1 bis 100 vor?</p>
+   <p><i>P</i></p>
   <input type="text" id="input1" placeholder="Antwort">
   <br>
   <button onclick="check1()">Weiter</button>
@@ -35,8 +36,8 @@
 <!-- LEVEL 2 -->
 <div id="level2" class="level">
   <p>Seit wie vielen Tagen sind wir auf Snapchat befreundet?</p>
-  <p><i>Nutze die Karten.</i></p>
-  <input type="text" id="input2" placeholder="Wort">
+   <p><i>E</i></p>
+  <input type="text" id="input2" placeholder="Anzahl der Tage">
   <br>
   <button onclick="check2()">Weiter</button>
 </div>
@@ -44,7 +45,8 @@
 <!-- LEVEL 3 -->
 <div id="level3" class="level">
   <p>🧠 Was hat viele Blätter, ist aber kein Baum?</p>
-  <input type="text" id="input3" placeholder="Zahl">
+   <p><i>S</i></p>
+  <input type="text" id="input3" placeholder="Wort">
   <br>
   <button onclick="check3()">Weiter</button>
 </div>
@@ -52,7 +54,7 @@
 <!-- LEVEL 4 -->
 <div id="level4" class="level">
   <p>Bilde die Quersumme aus dem Datum,an dem dein Handy zwei grüne Punkte bekommen hat.</p>
-  <p><i>(Dein visuelles Rätsel)</i></p>
+  <p><i>O</i></p>
   <input type="text" id="input4" placeholder="Zahl">
   <br>
   <button onclick="check4()">Weiter</button>
@@ -69,10 +71,11 @@
 
 <!-- FINAL -->
 <div id="final" class="level">
-  <h2>🎉 Geschafft!</h2>
-  <p>Dein Gutscheincode:</p>
-  <h1>FORIVO-1234</h1>
-  <p>Stark gemacht 😄</p>
+  <h2>Wow wow wow - hat ja schon etwas gedauert...</h2>
+  <p>Alles gute zum Geburtstag mein Bester!<h2>
+  <h2>In den vergangenen Rätzseln sind Buchstaben "versteckt" gewesen. Anhand dieser Buchstaben kannst du erraten für was dieser Code ist:<h2>
+  <h1>H8GG 9B98 CF5H CG2F</h1>
+  <p>GG´s wenn du jetzt alles gelöst hast 🎉 </p>
 </div>
 
 <script>
@@ -80,35 +83,35 @@
     if (document.getElementById("input1").value === "20") { // ändern
       document.getElementById("level1").style.display = "none";
       document.getElementById("level2").style.display = "block";
-    } else { alert("Falsch 😄"); }
+    } else { alert("Sportsfreund... denk nochmal richtig nach!"); }
   }
 
   function check2() {
     if (document.getElementById("input2").value == "3462") { // ändern
       document.getElementById("level2").style.display = "none";
       document.getElementById("level3").style.display = "block";
-    } else { alert("Nope 😄"); }
+    } else { alert("Peinlich - das ist falsch); }
   }
 
   function check3() {
     if (document.getElementById("input3").value === "Buch") { // ändern
       document.getElementById("level3").style.display = "none";
       document.getElementById("level4").style.display = "block";
-    } else { alert("Fast 😄"); }
+    } else { alert("Dachte du bist schlau - auch falsch."); }
   }
 
   function check4() {
     if (document.getElementById("input4").value === "17") { // ändern
       document.getElementById("level4").style.display = "none";
       document.getElementById("level5").style.display = "block";
-    } else { alert("Nope 😄"); }
+    } else { alert("Streng dich verdammt nochmal an!"); }
   }
 
   function check5() {
-    if (document.getElementById("input5").value === "203462Buch17") { // ändern
+    if (document.getElementById("input5").value === "2034622213817") { // ändern
       document.getElementById("level5").style.display = "none";
       document.getElementById("final").style.display = "block";
-    } else { alert("Reihenfolge falsch 😄"); }
+    } else { alert("Falsch, du Hs. Jeder Buchstabe steht auch für eine Zahl. Denk nochmal nach"); }
   }
 </script>
 
