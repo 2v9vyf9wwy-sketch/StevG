@@ -1,0 +1,54 @@
+```html
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Geheimseite</title>
+  <style>
+    body {
+      font-family: Arial;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #111;
+      color: white;
+      text-align: center;
+    }
+    #content { display: none; }
+    input { padding: 10px; font-size: 16px; }
+    button { padding: 10px; }
+  </style>
+</head>
+<body>
+
+<div id="login">
+  <h2>🔐 Zugang nur mit PIN</h2>
+  <input type="password" id="pin" placeholder="PIN eingeben">
+  <br><br>
+  <button onclick="checkPin()">Öffnen</button>
+</div>
+
+<div id="content">
+  <h1>🎉 Überraschung!</h1>
+  <p>Hier ist dein Gutscheincode:</p>
+  <h2>DEIN-CODE-HIER</h2>
+  <p>Danke für deine Arbeit 🙌</p>
+</div>
+
+<script>
+  function checkPin() {
+    const correctPin = "1234"; // HIER DEIN PIN
+    const enteredPin = document.getElementById("pin").value;
+
+    if (enteredPin === correctPin) {
+      document.getElementById("login").style.display = "none";
+      document.getElementById("content").style.display = "block";
+    } else {
+      alert("Falscher PIN!");
+    }
+  }
+</script>
+
+</body>
+</html>
