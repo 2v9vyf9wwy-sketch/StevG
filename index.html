@@ -1,52 +1,85 @@
-```html
 <!DOCTYPE html>
 <html lang="de">
 <head>
   <meta charset="UTF-8">
-  <title>Geheimseite</title>
+  <title>Mission</title>
   <style>
     body {
       font-family: Arial;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 50vh;
       background: #111;
       color: white;
       text-align: center;
+      padding-top: 100px;
     }
-    #content { display: none; }
-    input { padding: 30px; font-size: 25px; }
-    button { padding: 12px; }
+    .level { display: none; }
+    input, button {
+      padding: 10px;
+      font-size: 16px;
+      margin-top: 10px;
+    }
   </style>
 </head>
 <body>
 
-<div id="login">
-  <h2>🔐 Zugang nur mit PIN, du HS</h2>
-  <input type="password" id="pin" placeholder="PIN eingeben">
-  <br><br>
-  <button onclick="checkPin()">Öffnen</button>
+<h1>🔐 Deine Mission</h1>
+
+<!-- LEVEL 1 -->
+<div id="level1">
+  <p>Die Quersumme aus dem Datum, an dem dein Handy zwei grüne Punkte bekommen hat</p>
+  <input type="text" id="input1" placeholder="17">
+  <br>
+  <button onclick="check1()">Weiter</button>
 </div>
 
-<div id="content">
-  <h1>HAPPY BIRTHDAY STEFAN 💕</h1>
-  <p>Hier ist dein 50€ Gutscheincode für Peso:</p>
-  <h2>H8GG 9B98 CF5H CG2F</h2>
-  <p>Wow Stefan, super gemacht. Hat jetzt aber auch gedauert...
-  Zusätzlich gehen wir noch 1x Döner essen aif mein Nacken.</p>
+<!-- LEVEL 2 -->
+<div id="level2" class="level">
+  <p>Welche Zutat kommt immer in meinen Döner?</p>
+  <input type="text" id="input2" placeholder="Käse">
+  <br>
+  <button onclick="check2()">Weiter</button>
+</div>
+
+<!-- LEVEL 3 -->
+<div id="level3" class="level">
+  <p>Wie viel MB an Daten haben wir bisher in WhatsApp gegenseitig versendet?</p>
+  <input type="text" id="input3" placeholder="1,6">
+  <br>
+  <button onclick="check3()">Weiter</button>
+</div>
+
+<!-- FINAL -->
+<div id="final" class="level">
+  <h2>🎉 Geschafft!</h2>
+  <p>Dein Gutscheincode:</p>
+  <h1>FORIVO-1234</h1>
+  <p>Stark gemacht, ud HS 😄</p>
 </div>
 
 <script>
-  function checkPin() {
-    const correctPin = "1234"; // HIER DEIN PIN
-    const enteredPin = document.getElementById("pin").value;
-
-    if (enteredPin === correctPin) {
-      document.getElementById("login").style.display = "none";
-      document.getElementById("content").style.display = "block";
+  function check1() {
+    if (document.getElementById("input1").value === "9") { // ändern
+      document.getElementById("level1").style.display = "none";
+      document.getElementById("level2").style.display = "block";
     } else {
-      alert("Falscher PIN!");
+      alert("Nope 😄");
+    }
+  }
+
+  function check2() {
+    if (document.getElementById("input2").value.toLowerCase() === "team") { // ändern
+      document.getElementById("level2").style.display = "none";
+      document.getElementById("level3").style.display = "block";
+    } else {
+      alert("Nope 😄");
+    }
+  }
+
+  function check3() {
+    if (document.getElementById("input3").value === "6") { // ändern
+      document.getElementById("level3").style.display = "none";
+      document.getElementById("final").style.display = "block";
+    } else {
+      alert("Nope 😄");
     }
   }
 </script>
