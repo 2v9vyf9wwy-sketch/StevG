@@ -9,7 +9,7 @@
       background: #111;
       color: white;
       text-align: center;
-      padding-top: 100px;
+      padding-top: 80px;
     }
     .level { display: none; }
     input, button {
@@ -22,10 +22,11 @@
 <body>
 
 <h1>🔐 Deine Mission</h1>
+<p>Ein Code. Fünf Schritte. Keine Abkürzungen.</p>
 
 <!-- LEVEL 1 -->
 <div id="level1">
-  <p>Die Quersumme aus dem Datum, an dem dein Handy zwei grüne Punkte bekommen hat</p>
+  <p>Wie oft kommt die Ziffer 8 in den Zahlen 1 bis 100 vor?</p>
   <input type="text" id="input1" placeholder="Antwort">
   <br>
   <button onclick="check1()">Weiter</button>
@@ -33,18 +34,37 @@
 
 <!-- LEVEL 2 -->
 <div id="level2" class="level">
-  <p>Welche Zutat kommt immer in meinen Döner?</p>
-  <input type="text" id="input2" placeholder="Antwort">
+  <p>Seit wie vielen Tagen sind wir auf Snapchat befreundet?</p>
+  <p><i>Nutze die Karten.</i></p>
+  <input type="text" id="input2" placeholder="Wort">
   <br>
   <button onclick="check2()">Weiter</button>
 </div>
 
 <!-- LEVEL 3 -->
 <div id="level3" class="level">
-  <p>Wie viel MB an Daten haben wir bisher in WhatsApp gegenseitig versendet?</p>
-  <input type="text" id="input3" placeholder="Antwort">
+  <p>🧠 Was hat viele Blätter, ist aber kein Baum?</p>
+  <input type="text" id="input3" placeholder="Zahl">
   <br>
   <button onclick="check3()">Weiter</button>
+</div>
+
+<!-- LEVEL 4 -->
+<div id="level4" class="level">
+  <p>Bilde die Quersumme aus dem Datum,an dem dein Handy zwei grüne Punkte bekommen hat.</p>
+  <p><i>(Dein visuelles Rätsel)</i></p>
+  <input type="text" id="input4" placeholder="Zahl">
+  <br>
+  <button onclick="check4()">Weiter</button>
+</div>
+
+<!-- LEVEL 5 -->
+<div id="level5" class="level">
+  <p>Setze alle Antworten in der richtigen Reihenfolge zusammen</p>
+  <p><i>Das ist dann das Passwort</i></p>
+  <input type="text" id="input5" placeholder="PIN">
+  <br>
+  <button onclick="check5()">Finale öffnen</button>
 </div>
 
 <!-- FINAL -->
@@ -52,35 +72,43 @@
   <h2>🎉 Geschafft!</h2>
   <p>Dein Gutscheincode:</p>
   <h1>FORIVO-1234</h1>
-  <p>Stark gemacht, du HS 😄</p>
+  <p>Stark gemacht 😄</p>
 </div>
 
 <script>
   function check1() {
-    if (document.getElementById("input1").value === "17") { // ändern
+    if (document.getElementById("input1").value === "20") { // ändern
       document.getElementById("level1").style.display = "none";
       document.getElementById("level2").style.display = "block";
-    } else {
-      alert("Falsch, du Idiot");
-    }
+    } else { alert("Falsch 😄"); }
   }
 
   function check2() {
-    if (document.getElementById("input2").value.toLowerCase() === "Käse") { // ändern
+    if (document.getElementById("input2").value == "3462") { // ändern
       document.getElementById("level2").style.display = "none";
       document.getElementById("level3").style.display = "block";
-    } else {
-      alert("Auch falsch, HS");
-    }
+    } else { alert("Nope 😄"); }
   }
 
   function check3() {
-    if (document.getElementById("input3").value === "1,6") { // ändern
+    if (document.getElementById("input3").value === "Buch") { // ändern
       document.getElementById("level3").style.display = "none";
+      document.getElementById("level4").style.display = "block";
+    } else { alert("Fast 😄"); }
+  }
+
+  function check4() {
+    if (document.getElementById("input4").value === "17") { // ändern
+      document.getElementById("level4").style.display = "none";
+      document.getElementById("level5").style.display = "block";
+    } else { alert("Nope 😄"); }
+  }
+
+  function check5() {
+    if (document.getElementById("input5").value === "203462Buch17") { // ändern
+      document.getElementById("level5").style.display = "none";
       document.getElementById("final").style.display = "block";
-    } else {
-      alert("Streng dich mal an...");
-    }
+    } else { alert("Reihenfolge falsch 😄"); }
   }
 </script>
 
